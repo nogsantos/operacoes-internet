@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0134630B401989AAB9077740 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C001DCAC7F2F1DA7753582AC /* libPods.a */; };
+		61D8C17F1BA30A5F004B3824 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 61D8C17E1BA30A5F004B3824 /* README.md */; };
 		61F73C041BA1FBE90022C462 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F73C031BA1FBE90022C462 /* main.m */; };
 		61F73C071BA1FBE90022C462 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F73C061BA1FBE90022C462 /* AppDelegate.m */; };
 		61F73C0A1BA1FBE90022C462 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F73C091BA1FBE90022C462 /* ViewController.m */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		23DC95E5E7041FF620EFB0A7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		30341851D20AAFB6E0E008FB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		61D8C17E1BA30A5F004B3824 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		61F73BFE1BA1FBE90022C462 /* ExemploDownload.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExemploDownload.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61F73C021BA1FBE90022C462 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61F73C031BA1FBE90022C462 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 		61F73BF51BA1FBE90022C462 = {
 			isa = PBXGroup;
 			children = (
+				61D8C17E1BA30A5F004B3824 /* README.md */,
 				61F73C001BA1FBE90022C462 /* ExemploDownload */,
 				61F73C1A1BA1FBEA0022C462 /* ExemploDownloadTests */,
 				61F73BFF1BA1FBE90022C462 /* Products */,
@@ -280,6 +283,7 @@
 			files = (
 				61F73C0A1BA1FBE90022C462 /* ViewController.m in Sources */,
 				61F73C071BA1FBE90022C462 /* AppDelegate.m in Sources */,
+				61D8C17F1BA30A5F004B3824 /* README.md in Sources */,
 				61F73C041BA1FBE90022C462 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
