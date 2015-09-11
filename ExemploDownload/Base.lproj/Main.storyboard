@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +16,47 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://" borderStyle="roundedRect" placeholder="URL do arquivo" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WHB-1n-byW">
+                                <rect key="frame" x="16" y="98" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92P-mJ-zTs">
+                                <rect key="frame" x="266" y="162" width="69" height="30"/>
+                                <state key="normal" title="Download">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startDownload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OAR-oW-bdF"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="H2L-bl-fYG">
+                                <rect key="frame" x="16" y="233" width="568" height="2"/>
+                            </progressView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="lR1-Tt-TTc">
+                                <rect key="frame" x="290" y="304" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WHB-1n-byW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4tb-KS-1BA"/>
+                            <constraint firstItem="H2L-bl-fYG" firstAttribute="top" secondItem="92P-mJ-zTs" secondAttribute="bottom" constant="41" id="A8j-Yn-iEu"/>
+                            <constraint firstItem="WHB-1n-byW" firstAttribute="centerX" secondItem="92P-mJ-zTs" secondAttribute="centerX" id="BIo-8V-BQx"/>
+                            <constraint firstItem="WHB-1n-byW" firstAttribute="leading" secondItem="H2L-bl-fYG" secondAttribute="leading" id="C2b-lY-1lv"/>
+                            <constraint firstItem="H2L-bl-fYG" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="QJp-RK-O6S"/>
+                            <constraint firstItem="H2L-bl-fYG" firstAttribute="centerX" secondItem="lR1-Tt-TTc" secondAttribute="centerX" id="Skw-z1-3tx"/>
+                            <constraint firstItem="WHB-1n-byW" firstAttribute="trailing" secondItem="H2L-bl-fYG" secondAttribute="trailing" id="VZv-Td-Nx4"/>
+                            <constraint firstItem="lR1-Tt-TTc" firstAttribute="top" secondItem="H2L-bl-fYG" secondAttribute="bottom" constant="69" id="gxT-tU-Bc6"/>
+                            <constraint firstItem="WHB-1n-byW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="78" id="i5x-TQ-n5F"/>
+                            <constraint firstItem="92P-mJ-zTs" firstAttribute="top" secondItem="WHB-1n-byW" secondAttribute="bottom" constant="34" id="nSJ-A1-hG7"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="downloadField" destination="WHB-1n-byW" id="oZV-J3-Yrt"/>
+                        <outlet property="loading" destination="8bC-Xf-vdC" id="2tB-zs-2fG"/>
+                        <outlet property="progressBar" destination="H2L-bl-fYG" id="qjG-VQ-TCM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
